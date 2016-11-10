@@ -1,0 +1,97 @@
+
+.wrapper-dia{
+	width: 14%;
+}
+
+.dia-evento{
+	position:relative;
+	margin:0 auto;
+	width: 100%;
+}
+
+.evento{
+	position: absolute;	
+}
+
+.label {
+	border: 1px solid black;
+}
+
+.no-evento{
+	position: absolute;
+}
+
+.no-evento:hover{
+	z-index:555555 !important;
+}
+
+.evento:hover{
+	z-index:555555 !important;
+}
+
+.evento-detalle{
+	position: relative; 
+	font-weight: bold;
+	margin: 5%;
+    overflow: hidden;
+    font-size: 1em;
+    font-size: small;
+    width: 90%;
+	
+}
+
+.separador-hora{
+	margin-left: 10px;
+    margin-right: 10px;
+}
+
+.hora-inicio{
+	margin-rigth: 50px;	
+}
+
+.horario-evento{
+	display: flex;
+}
+
+
+.no-evento a:link {
+	color: white;
+    text-decoration: none;
+}
+
+.no-evento a:visited {
+	color: white;
+    text-decoration: none;
+}
+
+.no-evento a:hover {
+	color: #2E64FE;
+    text-decoration: none !important;
+}
+
+.no-evento a:active {
+	color: white;
+    text-decoration: none;
+}
+
+
+
+.evento a:link {
+	color: white;
+    text-decoration: none;
+}
+
+.evento a:visited {
+	color: white;
+    text-decoration: none;
+}
+
+.evento a:hover {
+	color: #2E64FE;
+    text-decoration: none !important;
+}
+
+.evento a:active {
+	color: white;
+    text-decoration: none;
+}

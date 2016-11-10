@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+"-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<hibernate-mapping>
+	<class name="hibernate.model.Evento" table="evento">
+		<id column="id" name="id">
+			<generator class="native" />
+		</id>
+		<property column="nombre" name="nombre" />
+		<property column="fecha" name="fecha" />
+		<property column="inicio" name="inicio" />
+		<property column="fin" name="fin" />
+		<many-to-one name="owner" class="hibernate.model.Usuario" column="owner" cascade="none" lazy="false"/>
+		
+		<joined-subclass name="hibernate.model.EventoPrivado" table="eventoprivado">
+            <key column="id"  not-null="true" />
+            <property column="descripcion" name="descripcion" />
+            <property column="direccion" name="direccion" />
+        </joined-subclass>
+        
+        <joined-subclass name="hibernate.model.Reunion" table="reunion">
+            <key column="id"  not-null="true" />
+            <set name="invitados" cascade="all,delete-orphan" lazy="false" >
+		         <key column="id_reunion" not-null="true"/>
+		         <one-to-many class="hibernate.model.Invitado" />
+      		</set>
+            <property column="temario" name="temario" />
+            <many-to-one name="sala" class="hibernate.model.SalaReunion" cascade="none" lazy="false">
+            	<column name="id_sala" not-null="true" />
+            </many-to-one>     
+        </joined-subclass>
+		
+	</class>
+</hibernate-mapping>
