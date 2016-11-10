@@ -1,12 +1,12 @@
 -- password is 'admin' hashed con http://www.nitrxgen.net/hashgen/ - Ojo que tal vez haya que agregar un '*' adelante
 -- CREATE USER 'admin'@'localhost' IDENTIFIED BY PASSWORD '*4acfe3202a5ff5cf467898fc58aab1d615029441';
 
-CREATE SCHEMA IF NOT EXISTS agenda;
+CREATE SCHEMA IF NOT EXISTS agendaVera;
 
-GRANT ALL PRIVILEGES ON `agenda`.* TO 'admin'@'localhost'
-IDENTIFIED BY PASSWORD '*4acfe3202a5ff5cf467898fc58aab1d615029441';
+--GRANT ALL PRIVILEGES ON `agendaVera`.* TO 'admin'@'localhost'
+--IDENTIFIED BY PASSWORD '*4acfe3202a5ff5cf467898fc58aab1d615029441';
 
-USE agenda;
+USE agendaVera;
 
 DROP TABLE IF EXISTS evento;
 DROP TABLE IF EXISTS eventoprivado;
